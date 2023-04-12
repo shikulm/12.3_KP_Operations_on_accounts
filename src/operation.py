@@ -19,7 +19,10 @@ class operation():
         :param from_acc: исходная строка откуда или куда
         :return: отформтаированная для вывода строка
         """
-        if len(from_to_acc) <16:
+        if from_to_acc is None:
+            return ""
+
+        if len(from_to_acc) < 16:
              # Если строка содержит меньше 16 символов, то возвращаем строку с вопросами
             return "?" * len(from_to_acc)
 
@@ -36,10 +39,11 @@ class operation():
 
 
 
-oper = operation(date="2019-08-26T10:50:58.294041", description="Перевод организации",\
-                 from_acc="Maestro 1596837868705199", to_acc="Счет 64686473678894779589",\
-                 amount="8221.37", name_cur="руб.")
-print(oper)
+# oper = operation(date="2019-08-26T10:50:58.294041", description="Перевод организации",\
+#                  from_acc="Maestro 1596837868705199", to_acc="Счет 64686473678894779589",\
+#                  amount="8221.37", name_cur="руб.")
+
+# print(oper)
 #
 # print(oper.format_from("Maestro 1596837868705199"))
 

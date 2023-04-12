@@ -26,7 +26,7 @@ def test_format_from_to(operat_1):
     assert oper.format_from_to("Счет 75106830613657916952") == "Счет **6952"
     assert oper.format_from_to("57916") == "?????"
     assert oper.format_from_to("57916yf") == "???????"
-    assert oper.format_from_to(25) == "???????"
+    assert oper.format_from_to(None) == ""
 
 
 def test_format_from_to_TypeError(operat_1):
