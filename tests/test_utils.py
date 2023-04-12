@@ -24,3 +24,17 @@ def test_load_operation_TypeError():
 def test_load_operation_JSONDecodeError():
     with pytest.raises(json.decoder.JSONDecodeError):
         load_operation("empty_file.json")
+
+def test_format_date():
+    assert format_date("2019-08-26T10:50:58.294041") == "26.08.2019"
+    assert format_date("1956-11-13T10:50:58.294041") == "13.11.1956"
+
+
+def test_format_date_ValueError():
+    with pytest.raises(ValueError):
+        format_date("2019-26-08T10:50:58.294041")
+
+def test_format_date_TypeError():
+    with pytest.raises(TypeError):
+        format_date(25)
+        format_date()
