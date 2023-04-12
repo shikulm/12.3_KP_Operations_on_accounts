@@ -6,7 +6,7 @@
     "operationAmount": {
       "amount": "31957.58",
       "currency": {
-        "name": "руб.",
+            "name": "руб.",
         "code": "RUB"
       }
     },

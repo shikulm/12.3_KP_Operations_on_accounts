@@ -1,5 +1,6 @@
 import os
 import json
+from datetime import datetime
 
 FILE_OPERATIONS = "operations.json"
 
@@ -13,11 +14,23 @@ def load_operation(file_name: str = FILE_OPERATIONS) -> list:
 
     return json.load(open(full_file_name, "r", encoding="utf8"))
 
+def format_date(date: datetime) -> str:
+    """
+    Преобразование даты в формат MM.DD.YYYY
+    :param date: исходная дата, которую трбуется отформатировать
+    :return: отформатированная дата
+    """
+    dt = datetime.strptime(date[:10], "%Y-%m-%d")
+
+    return datetime.strftime(dt, "%d.%m.%Y")
+
 
 op = load_operation(FILE_OPERATIONS)
 print(op)
 
 # op2 =load_operation("empty_file.json")
 # print(op2)
+
+# print(format_date("2019-08-26T10:50:58.294041"))
 
 
