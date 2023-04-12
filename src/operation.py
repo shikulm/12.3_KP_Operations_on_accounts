@@ -39,11 +39,4 @@ class operation():
 
 
 
-# oper = operation(date="2019-08-26T10:50:58.294041", description="Перевод организации",\
-#                  from_acc="Maestro 1596837868705199", to_acc="Счет 64686473678894779589",\
-#                  amount="8221.37", name_cur="руб.")
-
-# print(oper)
-#
-# print(oper.format_from("Maestro 1596837868705199"))
 

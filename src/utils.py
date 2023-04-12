@@ -25,12 +25,6 @@ def format_date(date: datetime) -> str:
     return datetime.strftime(dt, "%d.%m.%Y")
 
 
-# op = load_operation(FILE_OPERATIONS)
-# print(op)
 
-# op2 =load_operation("empty_file.json")
-# print(op2)
-
-# print(format_date("2019-08-26T10:50:58.294041"))
 
 
