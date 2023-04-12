@@ -38,3 +38,4 @@ def test_format_date_TypeError():
     with pytest.raises(TypeError):
         format_date(25)
         format_date()
+
